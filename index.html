@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jimmy's Diner</title>
+        <link rel="stylesheet" href="index.css">
+        <!-- fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Smythe&display=swap" rel="stylesheet">
+        <!-- rating -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="header-text">
+                <h1>Jimmy's Diner</h1>
+                <p>The best burgers and pizzas in town.</p>
+            </div>    
+        </header>
+
+        <!-- Main -->
+        <main>
+            <!-- Rendered Out in index.js, Data from data.js-->
+            <section id="menu-container"></section>
+
+            <!-- Order -->
+            <section id="order-container" class="invisible">
+                <h2>Your Order</h2>
+
+                <!-- ordered items list (to be rendered)-->
+                <ul id="order-items-list">
+                </ul>
+
+                <!-- order total -->
+                <div class="total-container">
+                    <p class="total-label">Total Price:</p>
+                    <p id="total-price" class="price"></p>
+                </div>
+
+                <button class="order-btn">Complete Order</button>
+            </section>
+
+            <!-- Complete Order Module-->
+            <div id="complete-order-container" class="invisible">
+                <h2>Please Enter Your Card Details</h2>
+                <form id="order-form">
+                    <input type="text" id="name" placeholder="Enter your full name" aria-label="Full Name" required>
+                    <input type="text" id="card-number" placeholder="Enter card number" aria-label="Card Number" required>
+                    <input type="text" id="cvv" placeholder="Enter cvv" aria-label="cvv" required>
+                    <button type="submit" class="pay-btn">Pay</button>
+                </form>
+            </div>
+        </main>
+
+	    <script src="index.js" type="module"></script>
+    </body>
+</html>

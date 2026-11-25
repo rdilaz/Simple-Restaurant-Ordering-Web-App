@@ -16,12 +16,20 @@ A simple, single-page restaurant ordering application built with vanilla JavaScr
 * HTML5
 * CSS3
 * Vanilla JavaScript (ES6 Modules)
-* Font Awesome (for icons)
+* Font Awesome 4.7 from a CDN (for icons)
 
 ## How to Run
 
 1.  Clone this repository to your local machine.
-2.  Open the `index.html` file in your favorite web browser.
+2.  Serve the folder with any local web server, for example:
+
+    ```bash
+    python3 -m http.server 8000
+    ```
+
+3.  Open `http://localhost:8000` in your browser.
+
+The app loads `index.js` as an ES module, and browsers block module imports from pages opened straight from disk (`file://`), so double-clicking `index.html` shows an empty menu.
 
 ## Credit
-Thank you to scrimba for teaching me how to make a project like this!
+Built while following the [Scrimba](https://scrimba.com/) Frontend Developer Path.
